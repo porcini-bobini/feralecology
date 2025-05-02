@@ -1,93 +1,130 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize gallery placeholders
-    initGallery();
-    
-    // Add scroll animations
-    initScrollAnimations();
-    
-    // Enhanced worm background interactions
-    initWormBackgroundEffects();
-});
-
-// Create gallery placeholders (to be replaced with real images later)
-function initGallery() {
-    const galleryContainer = document.getElementById('gallery-container');
-    
-    // Create 6 placeholder items
-    for (let i = 0; i < 6; i++) {
-        const galleryItem = document.createElement('div');
-        galleryItem.className = 'gallery-item';
-        
-        const placeholder = document.createElement('div');
-        placeholder.className = 'placeholder';
-        placeholder.textContent = `Gallery Image ${i + 1}`;
-        
-        galleryItem.appendChild(placeholder);
-        galleryContainer.appendChild(galleryItem);
+// Sample data - Replace with real data later
+const events = [
+    {
+        title: "Spring Foraging Walk",
+        date: "April 15, 2024",
+        time: "10:00 AM - 1:00 PM",
+        description: "Join us for a guided walk through local parks to identify edible spring plants and learn about sustainable foraging practices.",
+        location: "Meeting point provided upon registration"
+    },
+    {
+        title: "Natural Wine Making Workshop",
+        date: "May 20, 2024",
+        time: "2:00 PM - 5:00 PM",
+        description: "Learn the basics of natural wine making, from fruit selection to fermentation techniques.",
+        location: "Workshop location provided upon registration"
     }
-    
-    // Add click handler for future functionality
-    document.querySelectorAll('.gallery-item').forEach(item => {
-        item.addEventListener('click', () => {
-            // This can be expanded later to show image in lightbox
-            console.log('Gallery item clicked');
-        });
-    });
+];
+
+// Initialize gallery images
+const galleryImages = [
+    { src: "images/wine1.jpg", alt: "Natural Wine Making Process" },
+    { src: "images/foraging1.jpg", alt: "Foraging Adventure" },
+    { src: "images/workshop1.jpg", alt: "Workshop Session" }
+];
+
+// Smooth scroll function
+function smoothScroll(target, duration) {
+    const targetElement = document.querySelector(target);
+    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    function ease(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
 }
 
-// Add fade-in animations when scrolling
-function initScrollAnimations() {
-    const contentPanels = document.querySelectorAll('.content-panel');
-    
-    // Set initial state
-    contentPanels.forEach(panel => {
-        panel.style.opacity = '0';
-        panel.style.transform = 'translateY(30px)';
-        panel.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-    });
-    
-    // Check if element is in viewport
-    const isInViewport = (element) => {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
-            rect.bottom >= 0
-        );
+// Intersection Observer for sections
+function initializeIntersectionObserver() {
+    const sections = document.querySelectorAll('.section');
+    const options = {
+        root: null,
+        threshold: 0.15,
+        rootMargin: '0px'
     };
-    
-    // Function to handle scroll animation
-    const handleScroll = () => {
-        contentPanels.forEach(panel => {
-            if (isInViewport(panel)) {
-                panel.style.opacity = '1';
-                panel.style.transform = 'translateY(0)';
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
             }
         });
-    };
-    
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
-    
-    // Initial check
-    handleScroll();
+    }, options);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 }
 
-// Add interactive effects to worm background
-function initWormBackgroundEffects() {
-    const wormsBackground = document.querySelector('.worms-background');
-    
-    // Subtle parallax effect on mouse movement
-    document.addEventListener('mousemove', (e) => {
-        const x = e.clientX / window.innerWidth;
-        const y = e.clientY / window.innerHeight;
-        
-        requestAnimationFrame(() => {
-            wormsBackground.style.backgroundPosition = `${x * 50}px ${y * 50}px`;
-        });
-    });
-    
-    // Reset position when mouse leaves the window
-    document.addEventListener('mouseleave', () => {
-        wormsBackground.style.backgroundPosition = '0 0';
+// Populate events with fade-in animation
+function populateEvents() {
+    const eventsGrid = document.querySelector('.events-grid');
+    events.forEach((event, index) => {
+        const eventCard = document.createElement('div');
+        eventCard.className = 'event-card';
+        eventCard.style.opacity = '0';
+        eventCard.style.transform = 'translateY(20px)';
+        eventCard.innerHTML = `
+            <h3>${event.title}</h3>
+            <p><strong>Date:</strong> ${event.date}</p>
+            <p><strong>Time:</strong> ${event.time}</p>
+            <p>${event.description}</p>
+            <p><em>${event.location}</em></p>
+        `;
+        eventsGrid.appendChild(eventCard);
+
+        // Trigger fade-in animation
+        setTimeout(() => {
+            eventCard.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            eventCard.style.opacity = '1';
+            eventCard.style.transform = 'translateY(0)';
+        }, index * 200);
     });
 }
+
+// Populate gallery with hover effect
+function populateGallery() {
+    const galleryGrid = document.querySelector('.gallery-grid');
+    galleryImages.forEach(image => {
+        const galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item';
+        galleryItem.innerHTML = `
+            <img src="${image.src}" alt="${image.alt}" loading="lazy">
+        `;
+        galleryGrid.appendChild(galleryItem);
+    });
+}
+
+// Handle navigation clicks
+function initializeNavigation() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            smoothScroll(this.getAttribute('href'), 1000);
+        });
+    });
+}
+
+// Initialize everything when the DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initializeIntersectionObserver();
+    populateEvents();
+    populateGallery();
+    initializeNavigation();
+});
