@@ -1,130 +1,180 @@
+const aboutText1 = `Feral Ecology is a foraged fruit wine project created by Daniel Goldberg. 
+It's an unfolding story of curious and whimsical humans with a twinkle in their eye 
+for finding joy and meaning where the dandelions break through the concrete. 
+
+Their bounty is urban fruit. Wild loquat! Juicy plums! Prickly pear! 
+Their salvation is your smile and the unexplainable glee in the mystery of creation 
+that brings people to discover fermentation, togetherness and a reverence for the earth which we are made of and belong to.`;
+
+const aboutText2 = `Daniel has been finding expression through cooking and foraging since he was a little boy. 
+He grew up in NYC, in a family of Soviet jewish immigrants, 
+hearing stories of his parents picking mushrooms in the woods. 
+
+He has been exploring the rich bay area landscape for 12 years: 
+picking mushrooms and feral fruit, fermenting, surfing, 
+and playing saxophone in various bands`;
+
 // Sample data - Replace with real data later
 const events = [
-    {
-        title: "Spring Foraging Walk",
-        date: "April 15, 2024",
-        time: "10:00 AM - 1:00 PM",
-        description: "Join us for a guided walk through local parks to identify edible spring plants and learn about sustainable foraging practices.",
-        location: "Meeting point provided upon registration"
-    },
-    {
-        title: "Natural Wine Making Workshop",
-        date: "May 20, 2024",
-        time: "2:00 PM - 5:00 PM",
-        description: "Learn the basics of natural wine making, from fruit selection to fermentation techniques.",
-        location: "Workshop location provided upon registration"
-    }
+  {
+    title: "Community Loquat Harvest & Processing",
+    date: "May 29-31, 2025",
+    description:
+      "OPEN TO ALL!! Join us for a couple days of harvesting and processing loquats in loquat wine. Pick a couple loquats and call it a day or stay for the whole process! We'd love your help :)",
+    location: "Sign up for a day/time slot here",
+    signupUrl:
+      "https://docs.google.com/spreadsheets/d/16fCYkzcfumjWQYi6aynf3fBOn0J_8ZwWUkqt0AvN3Ig",
+  },
+  {
+    title: "Feral Winemaking: a seasonal practicum of fermentation",
+    date: "June - August 2025",
+    description:
+      "A course where we guide you through the entire winemaking process, from harvesting wild yeast to foraging hundreds of pounds of feral fruit, to bottling. An opportunity to connect with the seasons, the abundance that is around us, and each other. ",
+    location: "Read more and sign up here!",
+    signupUrl:
+      "https://docs.google.com/forms/d/1MmS26qNwgJIzV_bCpJqV2v5ucYQ7J5fzh0bodTk4CgI",
+  },
 ];
 
 // Initialize gallery images
 const galleryImages = [
-    { src: "images/wine1.jpg", alt: "Natural Wine Making Process" },
-    { src: "images/foraging1.jpg", alt: "Foraging Adventure" },
-    { src: "images/workshop1.jpg", alt: "Workshop Session" }
+  { src: "images/a.jpg", alt: "prickly pear mead" },
+  { src: "images/bottle_shot.png", alt: "bottles" },
+  { src: "images/me-pouring.jpg", alt: "pouring" },
+  { src: "images/prickly_pears_fermenting.png", alt: "fermentation" },
+  { src: "images/loquats.png", alt: "loquats" },
+  { src: "images/mashing_loquats.png", alt: "mashing loquats" },
+  { src: "images/cellar.png", alt: "mary fairy cellar" },
+  { src: "images/winery.png", alt: "winery" },
 ];
 
 // Smooth scroll function
 function smoothScroll(target, duration) {
-    const targetElement = document.querySelector(target);
-    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    let startTime = null;
+  const targetElement = document.querySelector(target);
+  const targetPosition =
+    targetElement.getBoundingClientRect().top + window.pageYOffset;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
 
-    function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
-    }
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
 
-    function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-    }
+  function ease(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  }
 
-    requestAnimationFrame(animation);
+  requestAnimationFrame(animation);
 }
 
 // Intersection Observer for sections
 function initializeIntersectionObserver() {
-    const sections = document.querySelectorAll('.section');
-    const options = {
-        root: null,
-        threshold: 0.15,
-        rootMargin: '0px'
-    };
+  const sections = document.querySelectorAll(".section");
+  const options = {
+    root: null,
+    threshold: 0.15,
+    rootMargin: "0px",
+  };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, options);
-
-    sections.forEach(section => {
-        observer.observe(section);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
     });
+  }, options);
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
 }
 
 // Populate events with fade-in animation
 function populateEvents() {
-    const eventsGrid = document.querySelector('.events-grid');
-    events.forEach((event, index) => {
-        const eventCard = document.createElement('div');
-        eventCard.className = 'event-card';
-        eventCard.style.opacity = '0';
-        eventCard.style.transform = 'translateY(20px)';
-        eventCard.innerHTML = `
-            <h3>${event.title}</h3>
-            <p><strong>Date:</strong> ${event.date}</p>
-            <p><strong>Time:</strong> ${event.time}</p>
-            <p>${event.description}</p>
-            <p><em>${event.location}</em></p>
-        `;
-        eventsGrid.appendChild(eventCard);
+  const eventsGrid = document.querySelector(".events-grid");
+  events.forEach((event, index) => {
+    const eventCard = document.createElement("div");
+    eventCard.className = "event-card";
+    eventCard.style.opacity = "0";
+    eventCard.style.marginBottom = "20px";
+    eventCard.style.transform = "translateY(20px)";
 
-        // Trigger fade-in animation
-        setTimeout(() => {
-            eventCard.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            eventCard.style.opacity = '1';
-            eventCard.style.transform = 'translateY(0)';
-        }, index * 200);
-    });
+    // Extract URL from location if it exists
+    const locationText = event.location.split("here:")[0] || event.location;
+
+    eventCard.innerHTML = `
+      <h3>${event.title}</h3>
+      <p><strong>Date:</strong> ${event.date}</p>
+      <p>${event.description}</p>
+      <p><em>${`<a href="${event.signupUrl}" target="_blank" class="event-link">${locationText}</a>`}</em></p>
+    `;
+    eventsGrid.appendChild(eventCard);
+
+    // Trigger fade-in animation
+    setTimeout(() => {
+      eventCard.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+      eventCard.style.opacity = "1";
+      eventCard.style.transform = "translateY(0)";
+    }, index * 200);
+  });
 }
 
 // Populate gallery with hover effect
 function populateGallery() {
-    const galleryGrid = document.querySelector('.gallery-grid');
-    galleryImages.forEach(image => {
-        const galleryItem = document.createElement('div');
-        galleryItem.className = 'gallery-item';
-        galleryItem.innerHTML = `
+  const galleryGrid = document.querySelector(".gallery-grid");
+  galleryImages.forEach((image) => {
+    const galleryItem = document.createElement("div");
+    galleryItem.className = "gallery-item";
+    galleryItem.innerHTML = `
             <img src="${image.src}" alt="${image.alt}" loading="lazy">
         `;
-        galleryGrid.appendChild(galleryItem);
-    });
+    galleryGrid.appendChild(galleryItem);
+  });
 }
 
 // Handle navigation clicks
 function initializeNavigation() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            smoothScroll(this.getAttribute('href'), 1000);
-        });
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      smoothScroll(this.getAttribute("href"), 1000);
     });
+  });
+}
+
+// Add WhatsApp section after mailing list
+function addWhatsAppSection() {
+  const mailingListSection = document.querySelector("#mailing-list");
+  const whatsAppDiv = document.createElement("div");
+  whatsAppDiv.className = "whatsapp-section";
+  whatsAppDiv.innerHTML = `
+    <h3>Join Our WhatsApp Community</h3>
+    <p>Connect with fellow foragers & fermenters in our WhatsApp group!</p>
+    <a href="https://chat.whatsapp.com/FGkpB53p0xB9qylUDgiyQf" target="_blank" class="whatsapp-link">
+      Join WhatsApp Group
+    </a>
+  `;
+  mailingListSection.appendChild(whatsAppDiv);
 }
 
 // Initialize everything when the DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    initializeIntersectionObserver();
-    populateEvents();
-    populateGallery();
-    initializeNavigation();
+document.addEventListener("DOMContentLoaded", () => {
+  // Inject about text
+  const aboutTextElement = document.getElementById("about-text");
+  aboutTextElement.innerHTML = `<p>${aboutText1}</p><br /><p>${aboutText2}</p>`;
+
+  initializeIntersectionObserver();
+  populateEvents();
+  populateGallery();
+  initializeNavigation();
+  addWhatsAppSection();
 });
