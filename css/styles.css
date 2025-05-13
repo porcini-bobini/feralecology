@@ -62,7 +62,6 @@ h6 {
   height: 60px;
   object-fit: cover;
   overflow: hidden;
-  border-radius: 20% 23% 30% 25% / 60% 31% 53% 40%;
   transition: border-radius 0.8s ease;
   box-shadow: 6px 7px 10px 15px rgba(230, 53, 53, 0.2);
 }
@@ -124,19 +123,12 @@ h6 {
 }
 
 .content-box {
-  background-image: url("../images/background-image.png");
   background-size: cover;
-  padding: 4rem;
   margin-bottom: 4rem;
   margin-top: 10px;
   opacity: 0.85;
   transition: border-radius 0.8s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  border-radius: 30% 45% 25% 15% / 40% 60% 65% 50%;
-}
-
-.content-box:hover {
-  border-radius: 30% 50% 30% 15% / 36% 70% 80% 50%;
 }
 
 .section-title {
@@ -390,6 +382,8 @@ h6 {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  opacity: 1 !important; /* Ensure images are fully opaque */
+  background: #222; /* fallback background in case image has transparency */
 }
 
 .gallery-item:hover img {
@@ -428,6 +422,8 @@ h6 {
 .content-box li {
   display: inline-block;
   background: #bf5656;
+  /* background: #d869cc; */
+  /* background: #cecf90; */
   padding: 0.2em 0.6em;
   border-radius: 0.5em;
   margin-bottom: 0.5em;
