@@ -38,7 +38,7 @@ const events = [
 // Initialize gallery images
 const galleryImages = [
   { src: "images/a.jpg", alt: "prickly pear mead" },
-  { src: "images/bottle_shot.png", alt: "bottles" },
+  { src: "images/bottles.png", alt: "bottles" },
   { src: "images/me-pouring.png", alt: "pouring" },
   { src: "images/prickly_pears_fermenting.png", alt: "fermentation" },
   { src: "images/loquats.png", alt: "loquats" },
