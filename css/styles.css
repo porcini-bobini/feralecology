@@ -71,7 +71,6 @@ h6 {
   font-size: 40px;
   font-weight: 900;
   letter-spacing: 0.04em;
-  /* border-radius: 20% 23% 30% 25% / 60% 31% 53% 40%; */
   box-shadow: 6px 7px 10px 15px rgba(195, 7, 79, 0.2);
   object-fit: cover;
   width: 400px;
@@ -133,36 +132,16 @@ h6 {
   opacity: 0.85;
   transition: border-radius 0.8s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 30% 45% 25% 15% / 40% 60% 65% 50%;
+}
+
+.content-box:hover {
+  border-radius: 30% 50% 30% 15% / 36% 70% 80% 50%;
 }
 
 .section-title {
   text-align: center;
-}
-
-/* Blob variations for content boxes */
-.content-box:nth-child(3n + 1) {
-  border-radius: 30% 40% 30% 70% / 30% 90% 70% 40%;
-}
-
-.content-box:nth-child(3n + 2) {
-  border-radius: 30% 70% 70% 16% / 30% 30% 35% 80%;
-}
-
-.content-box:nth-child(3n + 3) {
-  border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
-}
-
-.content-box:nth-child(3n + 4) {
-  border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
-}
-
-.content-box:nth-child(3n + 5) {
-  border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
-}
-
-/* Hover effect for blob shapes */
-.content-box:hover {
-  border-radius: 50% 50% 40% 22% / 40% 60% 50% 60%;
+  background: none !important;
 }
 
 /* Profile Image */
@@ -222,6 +201,8 @@ h6 {
 
 .contact-list {
   list-style: none;
+  text-align: center;
+  padding-left: 0;
 }
 
 .contact-item {
@@ -232,6 +213,7 @@ h6 {
   color: var(--text-color);
   text-decoration: none;
   transition: opacity 0.3s ease;
+  display: inline-block;
 }
 
 .contact-link:hover {
@@ -266,7 +248,7 @@ h6 {
   display: inline-block;
   margin-top: 1rem;
   padding: 1rem 2rem;
-  background: #25D366;
+  background: #25d366;
   color: white;
   text-decoration: none;
   border-radius: 30px;
@@ -392,13 +374,12 @@ h6 {
   width: 100%;
   padding-bottom: 150%; /* Creates a 2:3 aspect ratio (3/2 = 1.5) */
   overflow: hidden;
-  border-radius: 10% 15% 10% 20% / 15% 10% 20% 15%;
+  border-radius: 5px;
   transition: transform 0.3s ease, border-radius 0.3s ease;
 }
 
 .gallery-item:hover {
   transform: scale(1.05);
-  border-radius: 15% 20% 15% 35% / 15% 45% 35% 20%;
 }
 
 .gallery-item img {
@@ -431,4 +412,50 @@ h6 {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* Stronger text shadow for content-box text */
+.content-box,
+.content-box p,
+.content-box h2,
+.content-box h3,
+.content-box li {
+  text-shadow: 0 2px 8px #bf5656, /* strong shadow for contrast */ 0 1px 0 #222;
+}
+
+/* Optional: subtle background for text only */
+.content-box p,
+.content-box li {
+  display: inline-block;
+  background: #bf5656;
+  padding: 0.2em 0.6em;
+  border-radius: 0.5em;
+  margin-bottom: 0.5em;
+  max-width: 100%;
+}
+
+.content-box p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Center contact and mailing list info text */
+.contact-list {
+  text-align: center;
+  padding-left: 0;
+}
+
+.contact-link {
+  display: inline-block;
+}
+
+.form-container + .section-title,
+#mailing-list .section-title {
+  text-align: center !important;
+  display: block;
+  width: 100%;
+}
+
+#mailing-list .section-title {
+  margin-bottom: 1.5em;
 }

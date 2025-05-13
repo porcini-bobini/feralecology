@@ -1,27 +1,26 @@
-const aboutText1 = `Feral Ecology is a foraged fruit wine project created by Daniel Goldberg. 
+const aboutText1 = `Feral Ecology is a foraged fruit wine project created by Daniel Goldberg and friends. 
 It's an unfolding story of curious and whimsical humans with a twinkle in their eye 
 for finding joy and meaning where the dandelions break through the concrete. 
 
-Their bounty is urban fruit. Wild loquat! Juicy plums! Prickly pear! 
+Their bounty is feral fruit. Wild loquat! Juicy plums! Prickly pear! 
 Their salvation is your smile and the unexplainable glee in the mystery of creation 
 that brings people to discover fermentation, togetherness and a reverence for the earth which we are made of and belong to.`;
 
-const aboutText2 = `Daniel has been finding expression through cooking and foraging since he was a little boy. 
+const aboutText2 = `Daniel has been finding expression through cooking and foraging since he was a wee lad. 
 He grew up in NYC, in a family of Soviet jewish immigrants, 
 hearing stories of his parents picking mushrooms in the woods. 
 
 He has been exploring the rich bay area landscape for 12 years: 
-picking mushrooms and feral fruit, fermenting, surfing, 
+foraging, fermenting, surfing, rock climbing, 
 and playing saxophone in various bands`;
 
-// Sample data - Replace with real data later
 const events = [
   {
     title: "Community Loquat Harvest & Processing",
     date: "May 29-31, 2025",
     description:
-      "OPEN TO ALL!! Join us for a couple days of harvesting and processing loquats in loquat wine. Pick a couple loquats and call it a day or stay for the whole process! We'd love your help :)",
-    location: "Sign up for a day/time slot here",
+      "OPEN TO ALL!! Join us for a couple days of harvesting and processing loquats into loquat wine. Pick a couple loquats and call it a day or stay for the whole process! You'll be sure to learn tons, get dirty, and have fun :)",
+    location: "Sign up for days/time slots here",
     signupUrl:
       "https://docs.google.com/spreadsheets/d/16fCYkzcfumjWQYi6aynf3fBOn0J_8ZwWUkqt0AvN3Ig",
   },
@@ -29,7 +28,7 @@ const events = [
     title: "Feral Winemaking: a seasonal practicum of fermentation",
     date: "June - August 2025",
     description:
-      "A course where we guide you through the entire winemaking process, from harvesting wild yeast to foraging hundreds of pounds of feral fruit, to bottling. An opportunity to connect with the seasons, the abundance that is around us, and each other. ",
+      "A course cohosted with Learning By Hand, where we guide you through the entire winemaking process, from harvesting wild yeast to foraging hundreds of pounds of feral fruit, to bottling. An opportunity to connect with the seasons, the abundance that is around us, and each other. ",
     location: "Read more and sign up here!",
     signupUrl:
       "https://docs.google.com/forms/d/1MmS26qNwgJIzV_bCpJqV2v5ucYQ7J5fzh0bodTk4CgI",
@@ -40,7 +39,7 @@ const events = [
 const galleryImages = [
   { src: "images/a.jpg", alt: "prickly pear mead" },
   { src: "images/bottle_shot.png", alt: "bottles" },
-  { src: "images/me-pouring.jpg", alt: "pouring" },
+  { src: "images/me-pouring.png", alt: "pouring" },
   { src: "images/prickly_pears_fermenting.png", alt: "fermentation" },
   { src: "images/loquats.png", alt: "loquats" },
   { src: "images/mashing_loquats.png", alt: "mashing loquats" },
@@ -108,8 +107,7 @@ function populateEvents() {
     eventCard.style.marginBottom = "20px";
     eventCard.style.transform = "translateY(20px)";
 
-    // Extract URL from location if it exists
-    const locationText = event.location.split("here:")[0] || event.location;
+    const locationText = event.location.toUpperCase();
 
     eventCard.innerHTML = `
       <h3>${event.title}</h3>
@@ -157,8 +155,8 @@ function addWhatsAppSection() {
   const whatsAppDiv = document.createElement("div");
   whatsAppDiv.className = "whatsapp-section";
   whatsAppDiv.innerHTML = `
-    <h3>Join Our WhatsApp Community</h3>
-    <p>Connect with fellow foragers & fermenters in our WhatsApp group!</p>
+    <h3>Join Our WhatsApp Group</h3>
+    <p>Connect with fellow foragers & fermenters and stay up to date on minutiae in our WhatsApp group!</p>
     <a href="https://chat.whatsapp.com/FGkpB53p0xB9qylUDgiyQf" target="_blank" class="whatsapp-link">
       Join WhatsApp Group
     </a>
