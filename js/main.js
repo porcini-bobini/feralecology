@@ -19,19 +19,22 @@ const events = [
     title: "Community Loquat Harvest & Processing",
     date: "May 29-31, 2025",
     description:
-      "OPEN TO ALL!! Join us for a couple days of harvesting and processing loquats into loquat wine. Pick a couple loquats and call it a day or stay for the whole process! You'll be sure to learn tons, get dirty, and have fun :)",
-    location: "Sign up for days/time slots here",
+      "OPEN TO ALL!! Join us for a couple days of harvesting and processing East Bay loquats into loquat wine. We have been diligently mapping public trees and getting permission from folks with backyard trees and now is the time to harvest. Pick a couple loquats and call it a day or stay for the whole process! You'll be sure to learn tons, get dirty, and have fun :)",
+    location: "Sign up for days/time slots here. Additional coordination will be happening in the WhatsApp group (link down lower)",
     signupUrl:
       "https://docs.google.com/spreadsheets/d/16fCYkzcfumjWQYi6aynf3fBOn0J_8ZwWUkqt0AvN3Ig",
   },
   {
-    title: "Feral Winemaking: a seasonal practicum of fermentation",
+    title: "Feral Winemaking: a seasonal practicum of wild fermentation",
     date: "June - August 2025",
     description:
       "A course cohosted with Learning By Hand, where we guide you through the entire winemaking process, from harvesting wild yeast to foraging hundreds of pounds of feral fruit, to bottling. An opportunity to connect with the seasons, the abundance that is around us, and each other. ",
-    location: "Read more and sign up here!",
+    location: "Full details and registration coming soon",
     signupUrl:
-      "https://docs.google.com/forms/d/1MmS26qNwgJIzV_bCpJqV2v5ucYQ7J5fzh0bodTk4CgI",
+      "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExejF6cTFydXlkMnhyazI0bzI1cHlmbG9ueDRieGFybTgycXRsbHJ1cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ffvnSQSElCG1VENn58/giphy.gif",
+    // location: "Read more and sign up here!",
+    // signupUrl:
+    //   "https://docs.google.com/forms/d/1MmS26qNwgJIzV_bCpJqV2v5ucYQ7J5fzh0bodTk4CgI",
   },
 ];
 
