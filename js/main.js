@@ -22,7 +22,7 @@ const events = [
       "OPEN TO ALL!! Join us for a couple days of harvesting and processing East Bay loquats into loquat wine. We have been diligently mapping public trees and getting permission from folks with backyard trees and now is the time to harvest. Pick a couple loquats and call it a day or stay for the whole process! You'll be sure to learn tons, get dirty, and have fun :)",
     location: "Sign up for days/time slots here. Additional coordination will be happening in the WhatsApp group (link down lower)",
     signupUrl:
-      "https://docs.google.com/spreadsheets/d/16fCYkzcfumjWQYi6aynf3fBOn0J_8ZwWUkqt0AvN3Ig",
+      "https://docs.google.com/forms/d/e/1FAIpQLSeiV1fRSNBlz9waMaWStlADrDvB283nyplrYXziXhSnRZYVEQ/viewform?usp=header",
   },
   {
     title: "Feral Winemaking: a seasonal practicum of wild fermentation",
