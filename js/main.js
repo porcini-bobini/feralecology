@@ -30,7 +30,7 @@ const events = [
       "A course cohosted with Learning By Hand, where we guide you through the entire winemaking process, from harvesting wild yeast to foraging hundreds of pounds of feral fruit, to bottling. A thorough educational opportunity to connect with the seasons, the abundance that is around us, and age old harvesting & food preservation techniques. ",
     location: "Full details and registration coming soon",
     signupUrl: "https://lu.ma/xmk8k5pc",
-    location: "Bridge Storage Arts and Events",
+    location: "SIGN UP HERE",
   },
 ];
 
@@ -167,7 +167,7 @@ function addWhatsAppSection() {
 document.addEventListener("DOMContentLoaded", () => {
   // Inject about text
   const aboutTextElement = document.getElementById("about-text");
-  aboutTextElement.innerHTML = `<p>${aboutText1}</p><br /><p>${aboutText2}</p>`;
+  aboutTextElement.innerHTML = `<p>${aboutText1}</p><br /><p>${aboutText2}</p><br /><p><a href="https://www.berkeleyside.org/2025/07/11/feral-ecology-fruit-wine-loquat-harvest-foraging" target="_blank" class="news-link">Read our recent article in Berkeleyside here</a></p>`;
 
   initializeIntersectionObserver();
   populateEvents();
