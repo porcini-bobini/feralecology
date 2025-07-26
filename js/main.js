@@ -1,12 +1,13 @@
 const aboutText1 = `Feral Ecology is a project exploring foraging | fermentation | food as portals for human + ecological expression, healing, and connectivity. 
 It is an unfolding story of curious and whimsical humans with a twinkle in their eye 
-for finding joy and meaning where the dandelions break through the concrete.
+for finding joy and meaning where the dandelions break through the concrete.`;
 
-The gift is nature's wild pantry. Feral fruit! Wild mushrooms! Invasive wild boar! Acorn! Seaweeds, clams and mussels!
-The salvation is your smile and the unexplainable glee in the mystery of creation 
+const aboutText2 = `The gift: feral fruit! Wild mushrooms! Invasive wild boar! Acorn! Seaweeds, clams and mussels!`;
+const aboutText3 = `The salvation: your smile and the unexplainable glee in the mystery of creation 
 that brings people to discover fermentation, fire, song, togetherness and a reverence for the earth which we are made of and belong to.`;
 
-const aboutText2 = `Daniel Goldberg has been finding expression through cooking and foraging since he was a wee lad. 
+const aboutText4 = `Our offerings include wine, as well as a mix of events that revolve around the seasons. Community urban fruit harvests, educational hands on workshops, foraging outings, guerilla fruit tree planting, and more.`;
+const aboutText5 = `Daniel Goldberg has been finding expression through cooking and foraging since he was a wee lad. 
 He grew up in NYC, in a family of Soviet jewish immigrants, 
 hearing stories of his parents picking mushrooms in the woods. 
 
@@ -36,14 +37,14 @@ const events = [
 
 // Initialize gallery images
 const galleryImages = [
-  { src: "images/a.jpg", alt: "prickly pear mead" },
+  { src: "images/elderberry.png", alt: "elderberry" },
   { src: "images/bottles.png", alt: "bottles" },
   { src: "images/me-pouring.png", alt: "pouring" },
   { src: "images/prickly_pears_fermenting.png", alt: "fermentation" },
   { src: "images/loquats.png", alt: "loquats" },
-  { src: "images/mashing_loquats.png", alt: "mashing loquats" },
+  { src: "images/stomp.png", alt: "mashing plums" },
   { src: "images/cellar.png", alt: "mary fairy cellar" },
-  { src: "images/winery.png", alt: "winery" },
+  { src: "images/stomp2.png", alt: "stomp" },
 ];
 
 // Smooth scroll function
@@ -167,7 +168,7 @@ function addWhatsAppSection() {
 document.addEventListener("DOMContentLoaded", () => {
   // Inject about text
   const aboutTextElement = document.getElementById("about-text");
-  aboutTextElement.innerHTML = `<p>${aboutText1}</p><br /><p>${aboutText2}</p><br /><p><a href="https://www.berkeleyside.org/2025/07/11/feral-ecology-fruit-wine-loquat-harvest-foraging" target="_blank" class="news-link">Read our recent article in Berkeleyside here</a></p>`;
+  aboutTextElement.innerHTML = `<p>${aboutText1}</p><br /><p>${aboutText2}</p><br /><p>${aboutText3}</p><br /><p>${aboutText4}</p><br /><p>${aboutText5}</p><br /><p><a href="https://www.berkeleyside.org/2025/07/11/feral-ecology-fruit-wine-loquat-harvest-foraging" target="_blank" class="news-link">Read our recent article in Berkeleyside here</a></p>`;
 
   initializeIntersectionObserver();
   populateEvents();
