@@ -1,12 +1,12 @@
-const aboutText1 = `Feral Ecology is a foraged fruit wine project created by Daniel Goldberg and friends. 
-It's an unfolding story of curious and whimsical humans with a twinkle in their eye 
-for finding joy and meaning where the dandelions break through the concrete. 
+const aboutText1 = `Feral Ecology is a project exploring foraging | fermentation | food as portals for human + ecological expression, healing, and connectivity. 
+It is an unfolding story of curious and whimsical humans with a twinkle in their eye 
+for finding joy and meaning where the dandelions break through the concrete.
 
-Their bounty is feral fruit. Wild loquat! Juicy plums! Prickly pear! 
-Their salvation is your smile and the unexplainable glee in the mystery of creation 
-that brings people to discover fermentation, togetherness and a reverence for the earth which we are made of and belong to.`;
+The gift is nature's wild pantry. Feral fruit! Wild mushrooms! Invasive wild boar! Acorn! Seaweeds, clams and mussels!
+The salvation is your smile and the unexplainable glee in the mystery of creation 
+that brings people to discover fermentation, fire, song, togetherness and a reverence for the earth which we are made of and belong to.`;
 
-const aboutText2 = `Daniel has been finding expression through cooking and foraging since he was a wee lad. 
+const aboutText2 = `Daniel Goldberg has been finding expression through cooking and foraging since he was a wee lad. 
 He grew up in NYC, in a family of Soviet jewish immigrants, 
 hearing stories of his parents picking mushrooms in the woods. 
 
