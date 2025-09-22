@@ -12,21 +12,27 @@ hearing stories of his parents picking mushrooms in the woods, but has called th
 
 const events = [
   {
-    title: "Community Wild Plum Harvest & Processing",
-    date: "July 17-19, 2025",
+    title: "Bioregional Regeneration Unconference",
+    date: "October 4, 2025",
+    description: "Join dooers and dreamers from across the Bay Delta Region to re-imagine a world that works for all life. Whether your a gardener, organizer, artist, land steward, technologist, or simply curious about building a thriving regenerative future, this is your invitation to join a growing network in the Bay Delta Bioregion, committed to enabling a future that is planet positive and life affirming for all live, human and non-human.",
+    location: "GET A TICKET",
+    signupUrl: "https://events.humanitix.com/fall-25-bioregional-regeneration-unconference",
+  },
+  {
+    title: "Community Apple Harvest & Cider Making",
+    date: "October 5, 2025",
     description:
-      "OPEN TO ALL!! Join us for a couple days of harvesting and processing East Bay Plums into wine. We have been diligently mapping public trees and getting permission from folks with backyard trees and now is the time to harvest. Pick a couple plums and call it a day or stay for the whole process! You'll be sure to learn tons, get dirty, and have fun :)",
+      "OPEN TO ALL!! Join us for a couple days of harvesting and processing East Bay + Sonoma county feral Apples into cider. We'll be hitting a mix of public trees in the east bay and abandoned orchards in Sonoma county. FREE + OPEN TO ALL!",
     location: "Join us in the WhatsApp group for more details",
     signupUrl: "https://chat.whatsapp.com/FGkpB53p0xB9qylUDgiyQf",
   },
   {
-    title: "Feral Winemaking: a seasonal practicum of wild fermentation",
-    date: "July 20, 27th and Sept 7, 2025 (SERIES)",
-    description:
-      "A course cohosted with Learning By Hand, where we guide you through the entire winemaking process, from harvesting wild yeast to foraging hundreds of pounds of feral fruit, to bottling. A thorough educational opportunity to connect with the seasons, the abundance that is around us, and age old harvesting & food preservation techniques. ",
-    location: "Full details and registration coming soon",
-    signupUrl: "https://lu.ma/xmk8k5pc",
-    location: "SIGN UP HERE",
+    title: "By The Way Wine Fest",
+    date: "October 25, 2025 1-5pm",
+    description: "Richmond Wine Collective wine fest! Check out what we've been brewing along with other local natural wine producers.",
+    location: "The Study Wine Bar, Richmond, CA",
+    signupUrl: "https://www.eventbrite.com/e/by-the-way-10-a-california-natural-wine-fair-tickets-1672167681549?aff=erelexpmlt",
+    location: "GET A TICKET",
   },
 ];
 
