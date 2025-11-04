@@ -232,6 +232,24 @@ h6 {
   opacity: 0.7;
 }
 
+/* Prominent preorder link under Events */
+.preorder-link {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-top: 1rem;
+  text-decoration: underline;
+}
+
+.news-link {
+  font-size: 1.5rem;
+}
+
+.preorder-link:hover {
+  opacity: 0.7;
+}
+
 /* WhatsApp Section */
 .whatsapp-section {
   margin-top: 2rem;

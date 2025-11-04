@@ -14,9 +14,11 @@ const events = [
   {
     title: "Bioregional Regeneration Unconference",
     date: "October 4, 2025",
-    description: "Join dooers and dreamers from across the Bay Delta Region to re-imagine a world that works for all life. Whether your a gardener, organizer, artist, land steward, technologist, or simply curious about building a thriving regenerative future, this is your invitation to join a growing network in the Bay Delta Bioregion, committed to enabling a future that is planet positive and life affirming for all live, human and non-human.",
+    description:
+      "Join dooers and dreamers from across the Bay Delta Region to re-imagine a world that works for all life. Whether your a gardener, organizer, artist, land steward, technologist, or simply curious about building a thriving regenerative future, this is your invitation to join a growing network in the Bay Delta Bioregion, committed to enabling a future that is planet positive and life affirming for all live, human and non-human.",
     location: "GET A TICKET",
-    signupUrl: "https://events.humanitix.com/fall-25-bioregional-regeneration-unconference",
+    signupUrl:
+      "https://events.humanitix.com/fall-25-bioregional-regeneration-unconference",
   },
   {
     title: "Community Apple Harvest & Cider Making",
@@ -29,9 +31,11 @@ const events = [
   {
     title: "By The Way Wine Fest",
     date: "October 25, 2025 1-5pm",
-    description: "Richmond Wine Collective wine fest! Check out what we've been brewing along with other local natural wine producers.",
+    description:
+      "Richmond Wine Collective wine fest! Check out what we've been brewing along with other local natural wine producers.",
     location: "The Study Wine Bar, Richmond, CA",
-    signupUrl: "https://www.eventbrite.com/e/by-the-way-10-a-california-natural-wine-fair-tickets-1672167681549?aff=erelexpmlt",
+    signupUrl:
+      "https://www.eventbrite.com/e/by-the-way-10-a-california-natural-wine-fair-tickets-1672167681549?aff=erelexpmlt",
     location: "GET A TICKET",
   },
 ];
@@ -42,7 +46,7 @@ const galleryImages = [
   { src: "images/bottles.png", alt: "bottles" },
   { src: "images/me-pouring.png", alt: "pouring" },
   { src: "images/prickly_pears_fermenting.png", alt: "fermentation" },
-  { src: "images/loquats.png", alt: "loquats" },
+  { src: "images/porcini.png", alt: "loquats" },
   { src: "images/stomp.png", alt: "mashing plums" },
   { src: "images/cellar.png", alt: "mary fairy cellar" },
   { src: "images/stomp2.png", alt: "stomp" },
@@ -169,7 +173,15 @@ function addWhatsAppSection() {
 document.addEventListener("DOMContentLoaded", () => {
   // Inject about text
   const aboutTextElement = document.getElementById("about-text");
-  aboutTextElement.innerHTML = `<p>${aboutText1}</p><br /><p>${aboutText2}</p><br /><p>${aboutText3}</p><br /><p>${aboutText4}</p><br /><p>${aboutText5}</p><br /><p><a href="https://www.berkeleyside.org/2025/07/11/feral-ecology-fruit-wine-loquat-harvest-foraging" target="_blank" class="news-link">Read our recent article in Berkeleyside here</a></p>`;
+  const preorderTextElement = `<a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScAY7OrXkxcG9Puip8YrSsnT75xE1_Kb3yynlg_TvIfSVQqyA/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="preorder-link"
+            >
+              >>> PREORDER WINES HERE <<<
+            </a>`;
+  aboutTextElement.innerHTML = `<p>${aboutText1}</p><br /><p>${aboutText2}</p> <p>${preorderTextElement}</p><br /><p>${aboutText3}</p><br /><p>${aboutText4}</p><br /><p>${aboutText5}</p><br /><p><a href="https://www.berkeleyside.org/2025/07/11/feral-ecology-fruit-wine-loquat-harvest-foraging" target="_blank" class="news-link">Read our recent article in Berkeleyside here</a></p>`;
 
   initializeIntersectionObserver();
   populateEvents();
