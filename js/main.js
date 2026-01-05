@@ -12,31 +12,12 @@ hearing stories of his parents picking mushrooms in the woods, but has called th
 
 const events = [
   {
-    title: "Bioregional Regeneration Unconference",
-    date: "October 4, 2025",
+    title: "FERAL FEST!",
+    date: "January 18, 2026 2-8pm @ The Study Wine Bar, Richmond, CA",
     description:
-      "Join dooers and dreamers from across the Bay Delta Region to re-imagine a world that works for all life. Whether your a gardener, organizer, artist, land steward, technologist, or simply curious about building a thriving regenerative future, this is your invitation to join a growing network in the Bay Delta Bioregion, committed to enabling a future that is planet positive and life affirming for all live, human and non-human.",
-    location: "GET A TICKET",
-    signupUrl:
-      "https://events.humanitix.com/fall-25-bioregional-regeneration-unconference",
-  },
-  {
-    title: "Community Apple Harvest & Cider Making",
-    date: "October 5, 2025",
-    description:
-      "OPEN TO ALL!! Join us for a couple days of harvesting and processing East Bay + Sonoma county feral Apples into cider. We'll be hitting a mix of public trees in the east bay and abandoned orchards in Sonoma county. FREE + OPEN TO ALL!",
-    location: "Join us in the WhatsApp group for more details",
-    signupUrl: "https://chat.whatsapp.com/FGkpB53p0xB9qylUDgiyQf",
-  },
-  {
-    title: "By The Way Wine Fest",
-    date: "October 25, 2025 1-5pm",
-    description:
-      "Richmond Wine Collective wine fest! Check out what we've been brewing along with other local natural wine producers.",
-    location: "The Study Wine Bar, Richmond, CA",
-    signupUrl:
-      "https://www.eventbrite.com/e/by-the-way-10-a-california-natural-wine-fair-tickets-1672167681549?aff=erelexpmlt",
-    location: "GET A TICKET",
+      "What is our folk culture? Feral Fest! is one answer - or at least an earnest & unhinged attempt at exploring that question.\n\n A moment to fill our cups on the quest for belonging, connection and participation in the most fundamental aspects of living. A raucous celebration of the folk ways!\n\n East bay chanterelles on hot fresh pizza piesss, wines n ciders from foraged fruits, circle dancing to hot Balkan brass bands til you get dizzy, wild mushroom display table. And funky crafts from the homies - bags from upcycled sails, bay nut chocolates, bioregional arts n crafts!?! The art of living well in deep connection with nature and one another. A daily practice, an act of resistance, a yearning, a privilege and a gift.\n\n This is our quirky slice of life in the bay. A pop-up village of wanderers and dreamers, where when the fog pulls in and the people go home, the ancestors will smile and see themselves in our reenactment.",
+    location: "RSVP HERE!",
+    signupUrl: "https://partiful.com/e/otmXMC1ZZ94gSUlQTREf",
   },
 ];
 
