@@ -12,12 +12,20 @@ hearing stories of his parents picking mushrooms in the woods, but has called th
 
 const events = [
   {
-    title: "FERAL FEST!",
-    date: "January 18, 2026 2-8pm @ The Study Wine Bar, Richmond, CA",
+    title: "FERAL WINEMAKING",
+    date: "July 11, 2026 11a-3pm @ Learning By Hand Studio, Richmond, CA",
     description:
-      "A raucous celebration of the folk ways!\n\n East bay chanterelles on hot fresh pizza piesss, wines n ciders from foraged fruits, circle dancing to hot Balkan brass bands til you get dizzy, wild mushroom display table. And funky crafts from the homies - bags from upcycled sails, bay nut chocolates, bioregional arts n crafts!?! The art of living well in deep connection with nature and one another. A daily practice, an act of resistance, a yearning, a privilege and a gift.\n\n This is our quirky slice of life in the bay. A pop-up village of wanderers and dreamers, where when the fog pulls in and the people go home, the ancestors will smile and see themselves in our reenactment.",
-    location: "RSVP HERE!",
-    signupUrl: "https://partiful.com/e/otmXMC1ZZ94gSUlQTREf",
+      "3-part, seasonal hands-on course where we will go from foraging our own fruit and cultivating wild yeast to fermenting and bottling our very own plum wine for you to take home!",
+    location: "TICKETS HERE",
+    signupUrl: "https://luma.com/ehmlefcj",
+  },
+  {
+    title: "SAVOUR x FERAL ECOLOGY // garden feast",
+    date: "Sun, Jul 19, 5pm - 9pm @ Bancroft Community Garden, Berkeley, CA",
+    description:
+      "Join our table at the Bancroft Community Garden for a multi-course dining experience celebrating the height of summer's abundance. We'll gather for an evening of fire-cooked food, natural wines, and ingredients harvested from gardens, coastlines, and wild places.",
+    location: "TICKETS HERE",
+    signupUrl: "https://events.humanitix.com/savour-x-feral-ecology-garden-feast",
   },
 ];
 
